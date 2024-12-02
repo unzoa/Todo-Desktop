@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简洁日历</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-header">
+        <div class="app-title">简洁日历</div>
+        <div class="window-controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索待办...">
+                <span class="search-icon" id="searchBtn">🔍</span>
+            </div>
+            <span class="export-button" id="exportMonth" title="导出当月数据">📥</span>
+            <span class="close-button" id="closeWindow">×</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prevMonth">&lt;</button>
+                <h2 id="monthDisplay"></h2>
+                <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="weekdays">
+                <div>日</div>
+                <div>一</div>
+                <div>二</div>
+                <div>三</div>
+                <div>四</div>
+                <div>五</div>
+                <div>六</div>
+            </div>
+            <div id="calendar-days"></div>
+        </div>
+        <div class="todo-container">
+            <div class="todo-inputs-container">
+                <div class="worktime-input">
+                    <input type="number" id="worktimeInput" placeholder="工时" min="0" max="24" step="0.5">
+                    <span class="worktime-total">今日工时: <span id="totalWorktime">0</span>h</span>
+                </div>
+                <div class="todo-input">
+                    <input type="text" id="todoInput" placeholder="添加新待办...">
+                    <button id="addTodo">添加</button>
+                </div>
+            </div>
+            <div class="todo-list-container">
+                <ul id="todoList"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="confirmDialog" class="confirm-dialog" style="display: none;">
+        <div class="confirm-content">
+            <p id="confirmMessage"></p>
+            <div class="confirm-buttons">
+                <button id="confirmCancel">取消</button>
+                <button id="confirmOk">确定</button>
+            </div>
+        </div>
+    </div>
+    <div id="searchResults" class="search-results" style="display: none;">
+        <div class="search-header">
+            <h3>搜索结果</h3>
+            <span class="close-search" id="closeSearch">×</span>
+        </div>
+        <div class="search-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

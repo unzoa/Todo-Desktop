@@ -1,0 +1,15 @@
+calendar-app/
+  ├── index.html
+  ├── loading.html
+  ├── styles.css
+  ├── script.js
+  ├── main.js
+  ├── service-worker.js
+  ├── manifest.json
+  ├── todoInput.js
+  ├── todoList.js
+  ├── generate-icons.js
+  ├── icons/
+  │   ├── icon-192x192.png
+  │   └── icon-512x512.png
+  └── package.json
